@@ -8,6 +8,8 @@ dotenv.config({
 
 })
 
+// here our condition is that we should run out server only if we are connected to database
+// so we are using .then and .catch syntax
 
 connectDB()
 .then(() => {

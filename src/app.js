@@ -2,7 +2,8 @@ import express from "express"
 import cors from "cors";
 import cookieParser from "cookie-parser";
 
-
+// here we are giving all the powers of express to app 
+// here express is used to talk to our node 
 const app = express()
 
 app.use(cors({
