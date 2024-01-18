@@ -23,6 +23,15 @@ app.use(express.static("public")) // it makes asssets in public folder accessiab
 app.use(cookieParser()) // allows us to do crud operatins on cookies
 
 
+
+
+//routes import
+
+import userRouter from './routes/user.routes.js'
+
+// routes declaration
+app.use("/api/v1/users",userRouter)
+
 export { app }
 
 
