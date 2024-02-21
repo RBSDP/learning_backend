@@ -1,11 +1,9 @@
-
 import mongoose, {Schema} from "mongoose";
 import jwt from 'jsonwebtoken';
 
-
 import bcrypt from "bcrypt";
 
-const userSchema = new Schema({
+const userSchema = new mongoose.Schema({
 
     userName : {
         type : String,
@@ -32,17 +30,15 @@ const userSchema = new Schema({
     },
 
     avatar : {
-        type : String, 
-        //cloudinary url
+        type : String, //cloudinary url
         required : true
     },
     coverImage : {
-        type : String, 
-        //cloudinary url
+        type : String, //cloudinary url
     },
     watchHistory : [
         {
-            type : Schema.Types.objectId,
+            type : Schema.Types.ObjectId,
             ref: "Video"
         }
     ],
@@ -65,6 +61,9 @@ userSchema.pre("save",async function(next){
     next()
 })
 
+userSchema.methods.isPasswordCorrect = async function(password){
+    return await bcrypt.compare(password,this.password)
+}
 
 userSchema.methods.generateAccessToken = function(){
     return jwt.sign({
