@@ -1,4 +1,8 @@
 This is backend project repo
+<<<<<<< HEAD
+=======
+This is backend project repo
+>>>>>>> 658e55cfaa1e23c9c588dfcb7017514006f15bdb
 
 <!-- the fillowing is the notes for Autentication took form Piyush Garg channel  -->
 
@@ -18,4 +22,7 @@ we can send this uid in different ways
 2)headers - if we are working on mobile apps we will send uid in headers
 
 3)response
+<<<<<<< HEAD
 
+=======
+>>>>>>> 658e55cfaa1e23c9c588dfcb7017514006f15bdb
