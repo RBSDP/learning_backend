@@ -1,7 +1,7 @@
-import { User } from "../models/user.model";
-import { ApiError } from "../utils/ApiError";
-import { asyncHandler } from "../utils/asyncHandler";
-import { Jwt } from "jsonwebtoken";
+import { User } from "../models/user.model.js";
+import { ApiError } from "../utils/ApiError.js";
+import { asyncHandler } from "../utils/asyncHandler.js";
+import  Jwt  from "jsonwebtoken";
 
 export const verifyJWT = asyncHandler(async(req,res,next) =>{
 // if we are not usong feilds like ewq or res we keep it  "_" (it is used in production grade code) 
